@@ -33,11 +33,12 @@
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-uglify-es": "0.0.1",
     "rollup-plugin-vue": "^4.7.2",
-    "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
     "@rollup/plugin-node-resolve": "^8.0.1",
+    "bootstrap-vue": "^2.15.0",
+    "vue": "^2.6.11",
     "vue-sweetalert2": "^3.0.5"
   }
 }

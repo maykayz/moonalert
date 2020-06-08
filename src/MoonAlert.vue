@@ -23,7 +23,9 @@
 <script>
 import Vue from 'vue';
 import VueSweetalert2 from 'vue-sweetalert2';
+import bootstrapVue from 'bootstrap-vue';
 Vue.use(VueSweetalert2);
+Vue.use(bootstrapVue)
 export default {
   data() {
     return {}
