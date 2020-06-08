@@ -1,4 +1,5 @@
 # moon-alert
+https://www.npmjs.com/package/moonalert
 
 ## Install
 ```
