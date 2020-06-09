@@ -11,10 +11,16 @@ const argv = minimist(process.argv.slice(2));
 
 const config = {
   input: "src/entry.js",
-  output: {
-    name: "MoonAlert",
-    exports: "named"
-  },
+  output: [
+    {
+      name: "MoonAlert",
+      exports: "named"
+    },
+    {
+      name: "MoonButton",
+      exports: "named"
+    }
+  ],
   plugins: [
     replace({
       "process.env.NODE_ENV": JSON.stringify("production")

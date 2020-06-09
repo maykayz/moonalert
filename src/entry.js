@@ -1,9 +1,11 @@
 import MoonAlert from './MoonAlert.vue'
+import MoonButton from './MoonButton.vue'
 
 function install(Vue) {
   if (install.installed) return
   install.installed = true
   Vue.component('MoonAlert', MoonAlert)
+  Vue.component('MoonButton', MoonButton)
 }
 
 const plugin = {
@@ -22,5 +24,9 @@ if (GlobalVue) {
 }
 
 MoonAlert.install = install
+MoonButton.install = install
 
-export default MoonAlert
+export {
+  MoonAlert,
+  MoonButton
+}
