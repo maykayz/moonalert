@@ -1,6 +1,6 @@
 {
   "name": "moonalert",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "dist/moonalert.umd.js",
   "module": "dist/moonalert.esm.js",
   "unpkg": "dist/moonalert.min.js",
