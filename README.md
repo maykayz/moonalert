@@ -1,5 +1,11 @@
 # moon-alert
+Alert and button component library
+
+# npm 
 https://www.npmjs.com/package/moonalert
+
+# repo
+https://github.com/maykayz/moonalert
 
 ## Install
 ```
