@@ -1,7 +1,7 @@
 # moon-alert
 Alert and button component library
 
-# npm 
+# npm
 https://www.npmjs.com/package/moonalert
 
 # repo
@@ -21,15 +21,75 @@ Vue.component('moon-button',MoonButton)
 
 ### Usage
 ```
-<moon-alert alertType="success" text="Your operation is successful!!">Continue</moon-alert>
-<moon-alert alertType="warning" text="This might lead to problem">Warning</moon-alert>
-<moon-alert alertType="danger" text="Sorry..! Your operation failed">Error</moon-alert>
-<moon-alert alertType="confirm" text="Are you sure you want to delete???">Delete</moon-alert>
+        <moon-alert
+          text="Your operation is successful"
+          confirmButtonText="OK"
+          alertType="success"
+          :showButton="true"
+        >
+          Success
+        </moon-alert>
 
-<moon-button variant="success" :type="'text'" @onClick="clickHandler">
-    Click Here
-</moon-button>
+        <moon-alert
+          text="This might lead to a problem"
+          confirmButtonText="Keep Going"
+          alertType="warning"
+          :showButton="true"
+        >
+          Warning
+        </moon-alert>
+
+        <moon-alert
+          text="Sorry..! Your operation has failed..!"
+          confirmButtonText="OK"
+          alertType="danger"
+          :showButton="true"
+        >
+          Error
+        </moon-alert>
+
+        <moon-alert
+          title="Are you sure?"
+          text="Are you sure you want to delete this?"
+          alertType="confirm"
+          :showButton="true"
+          confirmButtonText="Delete"
+          confirmCallbackTitle="Deleted!"
+          confirmCallbackText="Your file has successfully deleted!"
+          @onConfirm="deleteConfirm"
+        >
+          Confirm
+        </moon-alert>
+
+        <!-- Without Button and custom triggering -->
+        <h5>Custom event trigger</h5>
+        <moon-alert
+          text="Your operation is successful"
+          alertType="success"
+          ref="successAlert"
+          confirmButtonText="OK"
+          :showButton="false"
+        >
+        </moon-alert>
+        <moon-button @onClick="showAlert">Click</moon-button>
+        <!-- Without Button and custom triggering -->
 ```
+
+```` inside vue methods
+
+  methods: {
+    showAlert(){
+      //do smth you have to do first...
+      //after your operation, show success alert
+      this.$refs.successAlert.successAlert()
+    },
+    deleteConfirm(){
+      //operate delete actions
+      this.$refs.successAlert.confirmSuccess('Deleted!','Your file is successfully deleted!')
+    }
+  },
+
+````
 ### dependencies
 https://www.npmjs.com/package/vue-sweetalert2
 https://bootstrap-vue.org
